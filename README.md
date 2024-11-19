@@ -1,11 +1,25 @@
-# multiple-db
+# Run the Application
+`if want to build localization-profile`
+### Execute the command to build your application `localization-profile`
 
-https://medium.com/@ozermerve/how-to-use-multiple-datasource-in-a-spring-boot-application-c9239ac8395
+````
+mvn clean package -P localization-profile
+````
+### After building, run the packaged JAR file of your application as follows: `localization`
+````
+java -jar target/FormFieldLocalizationSecurity-0.0.1-SNAPSHOT.jar --spring.profiles.active=localization
+````
 
-How to insert data to type of project that has multiple db connections? 
-<br>
-How to use @Transactional Annotation at type of project that has multiple db connections? 
-<br>
-👀👀 EntityManagerLocator, AgeAverageEntityManager 👀👀
+`if want to build form-profile`
+
+####  Execute the command to build your application `form-profile`
+
+````
+mvn clean package -P form-profile
+````
+#####   After building, run the packaged JAR file of your application as follows: `form`
+```` 
+java -jar target/FormFieldLocalizationSecurity-0.0.1-SNAPSHOT.jar --spring.profiles.active=form
+````
 
 
